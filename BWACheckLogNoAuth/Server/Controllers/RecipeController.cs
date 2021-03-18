@@ -1,4 +1,5 @@
-﻿using BWACheckLogNoAuth.Server.Services;
+﻿using BWACheckLogNoAuth.Server.Data.Context;
+using BWACheckLogNoAuth.Server.Services;
 using BWACheckLogNoAuth.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,10 +14,12 @@ namespace BWACheckLogNoAuth.Server.Controllers
     {
         //private RecipeDbOperations dbOpereations = new RecipeDbOperations();
         private readonly IRecipeService _recipeService;
+        private readonly AppDbContext _appDbContext;
 
-        public RecipeController(IRecipeService recipeService)
+        public RecipeController(IRecipeService recipeService, AppDbContext appDbContext)
         {
             _recipeService = recipeService;
+            _appDbContext = appDbContext;
         }
 
         // GET: api/<controller>
@@ -36,25 +39,42 @@ namespace BWACheckLogNoAuth.Server.Controllers
 
         // POST api/<controller>
         [HttpPost("create")]
-        public void Post([FromBody] Recipe recipe)
+        public async Task<IActionResult> Post([FromBody] Recipe recipe)
         {
             if (ModelState.IsValid)
-                _recipeService.SaveAsync(recipe);
+            {
+                var result = await _recipeService.SaveAsync(recipe);
+                return Ok(result);
+            }
+
+            return BadRequest("Data not valid");
+                
         }
 
         // PUT api/<controller>/5
         [HttpPut("edit")]
-        public void Put([FromBody] Recipe recipe)
+        public async Task<IActionResult> Put([FromBody] Recipe recipe)
         {
             if (ModelState.IsValid)
-                _recipeService.UpdateAsync(recipe.RecipeId, recipe);
+            {
+                var result = await _recipeService.UpdateAsync(recipe.RecipeId, recipe); //error DI if not
+
+                //_appDbContext.Update(recipe);
+                //_appDbContext.SaveChanges();
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
         // DELETE api/<controller>/5
         [HttpDelete("delete/{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _recipeService.DeleteAsync(id);
+            var result = await _recipeService.DeleteAsync(id);
+            return Ok(result);
         }
     }
 }

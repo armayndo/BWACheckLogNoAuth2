@@ -22,18 +22,18 @@ namespace BWACheckLogNoAuth.Server.Services
 
         public async Task<RecipeResponse> DeleteAsync(int id)
         {
-            var existingData = _recipeRepository.FindByIdAsync(id);
+            var existingData = await _recipeRepository.FindByIdAsync(id);
 
             if (existingData == null)
                 return new RecipeResponse("Category not found.");
 
             try
             {
-                _recipeRepository.Remove(existingData.Result);
-                //await _unitOfWork.CompleteAsync(); //error
-                _unitOfWork.Complete();
+                _recipeRepository.Remove(existingData);
+                await _unitOfWork.CompleteAsync(); //error if not all async
+                //_unitOfWork.Complete();
 
-                return new RecipeResponse(existingData.Result);
+                return new RecipeResponse(existingData);
             }
             catch (Exception ex)
             {
@@ -52,8 +52,8 @@ namespace BWACheckLogNoAuth.Server.Services
             try
             {
                 await _recipeRepository.AddAsync(recipe);
-                //await _unitOfWork.CompleteAsync(); //error
-                _unitOfWork.Complete();
+                await _unitOfWork.CompleteAsync(); //error if all not async
+                //_unitOfWork.Complete();
 
                 return new RecipeResponse(recipe);
             }
@@ -80,9 +80,9 @@ namespace BWACheckLogNoAuth.Server.Services
 
             try
             {
-                //_recipeRepository.Update(existingData);
-                //await _unitOfWork.CompleteAsync(); //error
-                _unitOfWork.Complete();
+                //_recipeRepository.Update(existingData); //no need to update
+                await _unitOfWork.CompleteAsync(); //error if all not async
+                //_unitOfWork.Complete();
 
                 return new RecipeResponse(existingData);
             }
