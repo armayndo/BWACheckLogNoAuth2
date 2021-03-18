@@ -1,0 +1,102 @@
+[
+  {
+    "Id": 1,
+    "Question": "Normal Check-In: 08:00-08:30 ; Check-Out: 16:30-17:00",
+    "Description": ""
+  },
+  {
+    "Id": 2,
+    "Question": "Planning Today / Rencana Kerja Hari Ini",
+    "Description": "Jika lebih dari 1 pisahkan dengan titik koma (;)"
+  },
+  {
+    "Id": 3,
+    "Question": "Today Achievement / Pencapaian Hari ini",
+    "Description": "Jika lebih dari 1 pisahkan dengan titik koma (;)"
+  },
+  {
+    "Id": 4,
+    "Question": "CoVID 19",
+    "Description": ""
+  },
+  {
+    "Id": 5,
+    "Question": "Kota tujuan Anda ?",
+    "Description": "Sebutkan kota dimana Anda berada saat perjalanan dinas ataupun cuti"
+  },
+  {
+    "Id": 6,
+    "Question": "Apakah Anda keluar dari rumah ?",
+    "Description": ""
+  },
+  {
+    "Id": 7,
+    "Question": "Anda bekerja di / Your work location ?",
+    "Description": "Untuk lokasi Other , tulis lengkap nama lokasi dan nama kota.. Contoh: CY Berlian - Surabaya"
+  },
+  {
+    "Id": 8,
+    "Question": "Kota saat ini Anda berada ? (WFH)",
+    "Description": "Sebutkan nama kota dan lokasi"
+  },
+  {
+    "Id": 9,
+    "Question": "Menggunakan Transportasi ?",
+    "Description": ""
+  },
+  {
+    "Id": 10,
+    "Question": "Kondisi kesehatan Anda ?",
+    "Description": ""
+  },
+  {
+    "Id": 11,
+    "Question": "Pernah  berkunjung ke negara/daerah pandemi COVID-19 dalam 14 hari terakhir",
+    "Description": ""
+  },
+  {
+    "Id": 12,
+    "Question": "Gejala/Sakit apa yang Anda rasakan?",
+    "Description": ""
+  },
+  {
+    "Id": 13,
+    "Question": "Tanggal Pemeriksaan Terakhir dilakukan ?",
+    "Description": ""
+  },
+  {
+    "Id": 14,
+    "Question": "Pernah kontak dengan pasien Positif COVID-19 (berada dalam satu ruangan yang sama/kontak dalam jarak 1 meter) dalam 14 hari terakhir",
+    "Description": ""
+  },
+  {
+    "Id": 15,
+    "Question": "Sebutkan detail pertemuan tersebut ?",
+    "Description": "Informasi penting yang diharapkan : Siapa, Kapan dan Dimana"
+  },
+  {
+    "Id": 16,
+    "Question": "Pernah kontak dengan pasien PDP COVID-19 (berada dalam satu ruangan yang sama/kontak dalam jarak 1 meter) dalam 14 hari terakhir",
+    "Description": ""
+  },
+  {
+    "Id": 17,
+    "Question": "Pernah kontak dengan pasien ODP COVID-19 (berada dalam satu ruangan yang sama/kontak dalam jarak 1 meter) dalam 14 hari terakhir",
+    "Description": ""
+  },
+  {
+    "Id": 18,
+    "Question": "Upload Surat Keterangan Dokter",
+    "Description": ""
+  },
+  {
+    "Id": 19,
+    "Question": "Instansi/Badan/Dokter yang melakukan pemeriksaan ? dan lokasi pemeriksaan ?",
+    "Description": ""
+  },
+  {
+    "Id": 20,
+    "Question": "Apakah telah dinyatakan Sembuh ?",
+    "Description": ""
+  }
+]

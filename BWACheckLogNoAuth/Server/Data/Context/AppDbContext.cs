@@ -15,6 +15,12 @@ namespace BWACheckLogNoAuth.Server.Data.Context
 
         public DbSet<Recipe> tblRecipe { get; set; }
 
+        public DbSet<SurveyQuestion> SurveyQuestions { get; set; }
+        public DbSet<SurveyAnswer> SurveyAnswers { get; set; }
+        public DbSet<UserResponse> UserResponses { get; set; }
+        public DbSet<ResponseDetail> ResponseDetails { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
