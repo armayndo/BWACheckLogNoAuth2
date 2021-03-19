@@ -31,8 +31,10 @@
     </div>
 </div>
 
-@functions { [Parameter]
+@functions { 
+    [Parameter]
     public string recipeId { get; set; }
+
     Recipe recipe = new Recipe();
     protected override async Task OnInitializedAsync()
     {
