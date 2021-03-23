@@ -37,120 +37,122 @@ else
         </div>*@
     <QuestionTemplate currQuestion="1" surveyQuestion="@listSurveyQuestion[0]"
                       onChangeDropCallBack="@HandleChangeDrop"
-                      onChangeTextBoxCallBack="@HandleChangeTextBox">
+                      >
     </QuestionTemplate>
 
     @if (currQuestion >= 2)
     {
-        <QuestionTemplate currQuestion="2"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[0].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="2"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[0].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  onChangeTextBoxCallBack="@HandleChangeTextBox"
+                  @bind-TbAnswer="tbAnswer"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 3)
     {
-        <QuestionTemplate currQuestion="3"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[1].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="3"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[1].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 4)
     {
-        <QuestionTemplate currQuestion="4"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[2].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="4"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[2].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 5)
     {
-        <QuestionTemplate currQuestion="5"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[3].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="5"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[3].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 6)
     {
-        <QuestionTemplate currQuestion="6"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[4].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="6"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[4].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 7)
     {
-        <QuestionTemplate currQuestion="7"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[5].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="7"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[5].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 8)
     {
-        <QuestionTemplate currQuestion="8"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[6].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="8"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[6].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 9)
     {
-        <QuestionTemplate currQuestion="9"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[7].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="9"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[7].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 10)
     {
-        <QuestionTemplate currQuestion="10"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[8].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="10"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[8].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 11)
     {
-        <QuestionTemplate currQuestion="11"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[9].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="11"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[9].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 12)
     {
-        <QuestionTemplate currQuestion="12"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[10].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="12"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[10].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 13)
     {
-        <QuestionTemplate currQuestion="13"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[11].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="13"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[11].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 14)
     {
-        <QuestionTemplate currQuestion="14"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[12].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="14"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[12].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
     @if (currQuestion >= 15)
     {
-        <QuestionTemplate currQuestion="15"
-                          surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[13].NextQuestionId).FirstOrDefault()"
-                          onChangeDropCallBack="@HandleChangeDrop"
-                          onChangeTextBoxCallBack="@HandleChangeTextBox">
-        </QuestionTemplate>
+<QuestionTemplate currQuestion="15"
+                  surveyQuestion="@listSurveyQuestion.Where(x => x.Id == listTempResponse[13].NextQuestionId).FirstOrDefault()"
+                  onChangeDropCallBack="@HandleChangeDrop"
+                  >
+</QuestionTemplate>
     }
 
     @if (listTempResponse.Count() > 0 && listTempResponse.Last().NextQuestionId.Equals(0))
@@ -159,18 +161,35 @@ else
             <input type="submit" value="Submit" @onclick="@(async () => await Delete())" class="btn btn-primary" />
         </div>
     }
+    
+<h1>Parent Component @tbAnswer</h1>
+
+    <p>Parent <code>year</code>: @year</p>
+
+    <button @onclick="UpdateYear">Update Parent <code>year</code></button>
+
+    <Child @bind-Year="year" />
 
 }
 
 
 @code{
+    private Random r = new Random();
+    private int year = 1979;
+
+    private void UpdateYear()
+    {
+        year = r.Next(1950, 2021);
+    }
+
+
     private IList<SurveyQuestion> listSurveyQuestion;
     //private SurveyQuestion[] surveyQuestions;
     private UserResponse userResponse = new UserResponse();
     private ResponseDetail[] responseDetails;
     private IList<TempResponse> listTempResponse = new List<TempResponse>();
     private string tempAnswer = "";
-    //private string tempAnswerText = "";
+    private string tbAnswer = "";
     private int currQuestion = 1;
     private int? nextQuestion;
     //private int nextIndex = 0;
@@ -189,7 +208,7 @@ else
 
     protected async Task Delete()
     {
-        //await Http.DeleteAsync("api/Recipe/delete/");
+        await Http.DeleteAsync("api/Recipe/delete/");
         Console.WriteLine(tempAnswer.ToString());
     }
 
@@ -202,6 +221,7 @@ else
     {
         tempAnswer = e.Value.ToString();
         Console.WriteLine("tbValue:" + tempAnswer);
+        Console.WriteLine("tbValue:" + tbAnswer);
     }
 
     void HandleChangeDrop(ChangeEventArgs e)

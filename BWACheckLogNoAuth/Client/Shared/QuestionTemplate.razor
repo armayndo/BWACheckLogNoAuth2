@@ -32,7 +32,8 @@
                     else if (surveyQuestion.SurveyAnswers.First().AnswerType.Equals("TextBox"))
                     {
                         @*<input for="Name" class="form-control" @bind="@tempAnswerText" />*@
-                        <input for="Name" @onchange="onChangeTextBoxCallBack" class="form-control" />
+                        <input for="Name" value="@textBoxAnswer" @onchange="onChangeTextBoxCallBack"
+                               @onfocusout="@UpdateTextBoxFromChild" class="form-control" />
                     }
                 </div>
             </td>
@@ -54,4 +55,20 @@
 
     [Parameter]
     public EventCallback<ChangeEventArgs> onChangeTextBoxCallBack { get; set; }
+
+    [Parameter]
+    public string TbAnswer { get; set; }
+
+    [Parameter]
+    public EventCallback<string> TbAnswerChanged { get; set; }
+
+    public string textBoxAnswer { get; set; }
+
+    private async Task UpdateTextBoxFromChild()
+    {
+        await TbAnswerChanged.InvokeAsync($"{textBoxAnswer}~{currQuestion}_{surveyQuestion.Id}_{surveyQuestion.SurveyAnswers.First().NextQuestion}");
+    }
+
+
+
 }
