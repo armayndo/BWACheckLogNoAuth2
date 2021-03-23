@@ -2,380 +2,463 @@
   {
     "Id": 10,
     "SurveyQuestionId": 1,
-    "Answer": "Check-in",
-    "AnswerType": "drop",
-    "NextQuestion": 2
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
   },
   {
     "Id": 20,
     "SurveyQuestionId": 1,
-    "Answer": "Check-out",
-    "AnswerType": "drop",
-    "NextQuestion": 3
+    "Answer": "Check-in",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 2
   },
   {
     "Id": 30,
     "SurveyQuestionId": 1,
-    "Answer": "Sakit / sick",
-    "AnswerType": "drop",
-    "NextQuestion": 4
+    "Answer": "Check-out",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 3
   },
   {
     "Id": 40,
     "SurveyQuestionId": 1,
-    "Answer": "Perjalanan dinas / Biz trip",
-    "AnswerType": "drop",
-    "NextQuestion": 5
+    "Answer": "Sakit / sick",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 4
   },
   {
     "Id": 50,
     "SurveyQuestionId": 1,
-    "Answer": "Cuti / Leave",
-    "AnswerType": "drop",
-    "NextQuestion": 6
+    "Answer": "Perjalanan dinas / Biz trip",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 5
   },
   {
     "Id": 60,
     "SurveyQuestionId": 1,
-    "Answer": "Hari Libur",
-    "AnswerType": "drop",
+    "Answer": "Cuti / Leave",
+    "AnswerType": "Dropdown",
     "NextQuestion": 6
   },
   {
     "Id": 70,
+    "SurveyQuestionId": 1,
+    "Answer": "Hari Libur",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 6
+  },
+  {
+    "Id": 80,
     "SurveyQuestionId": 2,
     "Answer": "TextBox",
     "AnswerType": "TextBox",
     "NextQuestion": 7
   },
   {
-    "Id": 80,
-    "SurveyQuestionId": 7,
-    "Answer": "Rumah / Home - WFH",
-    "AnswerType": "drop",
-    "NextQuestion": 8
-  },
-  {
     "Id": 90,
     "SurveyQuestionId": 7,
-    "Answer": "Kantor / Office",
-    "AnswerType": "drop",
-    "NextQuestion": 9
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
   },
   {
     "Id": 100,
     "SurveyQuestionId": 7,
-    "Answer": "Other",
-    "AnswerType": "drop",
-    "NextQuestion": 9
+    "Answer": "Rumah / Home - WFH",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 8
   },
   {
     "Id": 110,
+    "SurveyQuestionId": 7,
+    "Answer": "Kantor / Office",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 9
+  },
+  {
+    "Id": 120,
+    "SurveyQuestionId": 7,
+    "Answer": "Other",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 9
+  },
+  {
+    "Id": 130,
     "SurveyQuestionId": 8,
     "Answer": "TextBox",
     "AnswerType": "TextBox",
     "NextQuestion": 10
   },
   {
-    "Id": 120,
-    "SurveyQuestionId": 9,
-    "Answer": "Kendaraan Pribadi",
-    "AnswerType": "drop",
-    "NextQuestion": 10
-  },
-  {
-    "Id": 130,
-    "SurveyQuestionId": 9,
-    "Answer": "Menumpang Kendaraan Pribadi Teman",
-    "AnswerType": "drop",
-    "NextQuestion": 10
-  },
-  {
     "Id": 140,
     "SurveyQuestionId": 9,
-    "Answer": "Transportasi Umum",
-    "AnswerType": "drop",
-    "NextQuestion": 10
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
   },
   {
     "Id": 150,
     "SurveyQuestionId": 9,
-    "Answer": "Other",
-    "AnswerType": "drop",
+    "Answer": "Kendaraan Pribadi",
+    "AnswerType": "Dropdown",
     "NextQuestion": 10
   },
   {
     "Id": 160,
-    "SurveyQuestionId": 10,
-    "Answer": "Fit / Sehat",
-    "AnswerType": "drop",
-    "NextQuestion": 11
+    "SurveyQuestionId": 9,
+    "Answer": "Menumpang Kendaraan Pribadi Teman",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 10
   },
   {
     "Id": 170,
-    "SurveyQuestionId": 10,
-    "Answer": "Sakit",
-    "AnswerType": "drop",
-    "NextQuestion": 12
+    "SurveyQuestionId": 9,
+    "Answer": "Transportasi Umum",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 10
   },
   {
     "Id": 180,
-    "SurveyQuestionId": 10,
-    "Answer": "Positif CoVID 19",
-    "AnswerType": "drop",
-    "NextQuestion": 13
+    "SurveyQuestionId": 9,
+    "Answer": "Other",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 10
   },
   {
     "Id": 190,
     "SurveyQuestionId": 10,
-    "Answer": "PDP CoVID 19",
-    "AnswerType": "drop",
-    "NextQuestion": 13
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
   },
   {
     "Id": 200,
     "SurveyQuestionId": 10,
-    "Answer": "ODP CoVID 19",
-    "AnswerType": "drop",
-    "NextQuestion": 13
+    "Answer": "Fit / Sehat",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 11
   },
   {
     "Id": 210,
-    "SurveyQuestionId": 11,
-    "Answer": "Ya",
-    "AnswerType": "drop",
-    "NextQuestion": 14
+    "SurveyQuestionId": 10,
+    "Answer": "Sakit",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 12
   },
   {
     "Id": 220,
-    "SurveyQuestionId": 11,
-    "Answer": "Tidak",
-    "AnswerType": "drop",
-    "NextQuestion": 14
+    "SurveyQuestionId": 10,
+    "Answer": "Positif CoVID 19",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 13
   },
   {
     "Id": 230,
-    "SurveyQuestionId": 14,
-    "Answer": "Ya",
-    "AnswerType": "drop",
-    "NextQuestion": 15
+    "SurveyQuestionId": 10,
+    "Answer": "PDP CoVID 19",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 13
   },
   {
     "Id": 240,
-    "SurveyQuestionId": 14,
-    "Answer": "Tidak",
-    "AnswerType": "drop",
-    "NextQuestion": 16
+    "SurveyQuestionId": 10,
+    "Answer": "ODP CoVID 19",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 13
   },
   {
     "Id": 250,
-    "SurveyQuestionId": 16,
-    "Answer": "Ya",
-    "AnswerType": "drop",
-    "NextQuestion": 15
+    "SurveyQuestionId": 11,
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
   },
   {
     "Id": 260,
-    "SurveyQuestionId": 16,
-    "Answer": "Tidak",
-    "AnswerType": "drop",
-    "NextQuestion": 17
+    "SurveyQuestionId": 11,
+    "Answer": "Ya",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 14
   },
   {
     "Id": 270,
+    "SurveyQuestionId": 11,
+    "Answer": "Tidak",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 14
+  },
+  {
+    "Id": 280,
+    "SurveyQuestionId": 14,
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
+  },
+  {
+    "Id": 290,
+    "SurveyQuestionId": 14,
+    "Answer": "Ya",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 15
+  },
+  {
+    "Id": 300,
+    "SurveyQuestionId": 14,
+    "Answer": "Tidak",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 16
+  },
+  {
+    "Id": 310,
+    "SurveyQuestionId": 16,
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
+  },
+  {
+    "Id": 320,
+    "SurveyQuestionId": 16,
+    "Answer": "Ya",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 15
+  },
+  {
+    "Id": 330,
+    "SurveyQuestionId": 16,
+    "Answer": "Tidak",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 17
+  },
+  {
+    "Id": 340,
     "SurveyQuestionId": 15,
     "Answer": "TextBox",
     "AnswerType": "TextBox",
     "NextQuestion": 0
   },
   {
-    "Id": 280,
+    "Id": 350,
+    "SurveyQuestionId": 17,
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
+  },
+  {
+    "Id": 360,
     "SurveyQuestionId": 17,
     "Answer": "Ya",
-    "AnswerType": "drop",
+    "AnswerType": "Dropdown",
     "NextQuestion": 15
   },
   {
-    "Id": 290,
+    "Id": 370,
     "SurveyQuestionId": 17,
     "Answer": "Tidak",
-    "AnswerType": "drop",
+    "AnswerType": "Dropdown",
     "NextQuestion": 0
   },
   {
-    "Id": 300,
+    "Id": 380,
     "SurveyQuestionId": 12,
     "Answer": "Batuk Kering",
     "AnswerType": "CheckBox",
     "NextQuestion": 18
   },
   {
-    "Id": 310,
+    "Id": 390,
     "SurveyQuestionId": 12,
     "Answer": "Demam",
     "AnswerType": "CheckBox",
     "NextQuestion": 18
   },
   {
-    "Id": 320,
+    "Id": 400,
     "SurveyQuestionId": 12,
     "Answer": "Sesak Nafas",
     "AnswerType": "CheckBox",
     "NextQuestion": 18
   },
   {
-    "Id": 330,
+    "Id": 410,
     "SurveyQuestionId": 12,
     "Answer": "Dada Nyeri",
     "AnswerType": "CheckBox",
     "NextQuestion": 18
   },
   {
-    "Id": 340,
+    "Id": 420,
     "SurveyQuestionId": 12,
     "Answer": "Other",
     "AnswerType": "CheckBox",
     "NextQuestion": 18
   },
   {
-    "Id": 350,
+    "Id": 430,
     "SurveyQuestionId": 18,
     "Answer": "Upload",
     "AnswerType": "Upload",
     "NextQuestion": 11
   },
   {
-    "Id": 360,
+    "Id": 440,
     "SurveyQuestionId": 13,
     "Answer": "DatePicker",
     "AnswerType": "DatePicker",
     "NextQuestion": 19
   },
   {
-    "Id": 370,
+    "Id": 450,
     "SurveyQuestionId": 19,
     "Answer": "TextBox",
     "AnswerType": "TextBox",
     "NextQuestion": 20
   },
   {
-    "Id": 380,
+    "Id": 460,
+    "SurveyQuestionId": 20,
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
+  },
+  {
+    "Id": 470,
     "SurveyQuestionId": 20,
     "Answer": "Ya",
-    "AnswerType": "drop",
+    "AnswerType": "Dropdown",
     "NextQuestion": 11
   },
   {
-    "Id": 390,
+    "Id": 480,
     "SurveyQuestionId": 20,
     "Answer": "Tidak",
-    "AnswerType": "drop",
+    "AnswerType": "Dropdown",
     "NextQuestion": 0
   },
   {
-    "Id": 400,
+    "Id": 490,
     "SurveyQuestionId": 3,
     "Answer": "TextBox",
     "AnswerType": "TextBox",
     "NextQuestion": 0
   },
   {
-    "Id": 410,
-    "SurveyQuestionId": 4,
-    "Answer": "Sakit Umum Selain CoVID 19",
-    "AnswerType": "drop",
-    "NextQuestion": 12
-  },
-  {
-    "Id": 420,
-    "SurveyQuestionId": 4,
-    "Answer": "Positif CoVID 19",
-    "AnswerType": "drop",
-    "NextQuestion": 13
-  },
-  {
-    "Id": 430,
-    "SurveyQuestionId": 4,
-    "Answer": "PDP CoVID 19",
-    "AnswerType": "drop",
-    "NextQuestion": 13
-  },
-  {
-    "Id": 440,
-    "SurveyQuestionId": 4,
-    "Answer": "ODP CoVID 19",
-    "AnswerType": "drop",
-    "NextQuestion": 13
-  },
-  {
-    "Id": 450,
-    "SurveyQuestionId": 4,
-    "Answer": "Other",
-    "AnswerType": "drop",
-    "NextQuestion": 12
-  },
-  {
-    "Id": 460,
-    "SurveyQuestionId": 5,
-    "Answer": "Surabaya",
-    "AnswerType": "drop",
-    "NextQuestion": 9
-  },
-  {
-    "Id": 470,
-    "SurveyQuestionId": 5,
-    "Answer": "Jakarta",
-    "AnswerType": "drop",
-    "NextQuestion": 9
-  },
-  {
-    "Id": 480,
-    "SurveyQuestionId": 5,
-    "Answer": "Banten",
-    "AnswerType": "drop",
-    "NextQuestion": 9
-  },
-  {
-    "Id": 490,
-    "SurveyQuestionId": 5,
-    "Answer": "Solo",
-    "AnswerType": "drop",
-    "NextQuestion": 9
-  },
-  {
     "Id": 500,
-    "SurveyQuestionId": 5,
-    "Answer": "D.I Yogyakarta",
-    "AnswerType": "drop",
-    "NextQuestion": 9
+    "SurveyQuestionId": 4,
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
   },
   {
     "Id": 510,
-    "SurveyQuestionId": 5,
-    "Answer": "Bali",
-    "AnswerType": "drop",
-    "NextQuestion": 9
+    "SurveyQuestionId": 4,
+    "Answer": "Sakit Umum Selain CoVID 19",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 12
   },
   {
     "Id": 520,
-    "SurveyQuestionId": 5,
-    "Answer": "Other",
-    "AnswerType": "drop",
-    "NextQuestion": 9
+    "SurveyQuestionId": 4,
+    "Answer": "Positif CoVID 19",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 13
   },
   {
     "Id": 530,
-    "SurveyQuestionId": 6,
-    "Answer": "Ya",
-    "AnswerType": "drop",
-    "NextQuestion": 5
+    "SurveyQuestionId": 4,
+    "Answer": "PDP CoVID 19",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 13
   },
   {
     "Id": 540,
+    "SurveyQuestionId": 4,
+    "Answer": "ODP CoVID 19",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 13
+  },
+  {
+    "Id": 550,
+    "SurveyQuestionId": 4,
+    "Answer": "Other",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 12
+  },
+  {
+    "Id": 560,
+    "SurveyQuestionId": 5,
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
+  },
+  {
+    "Id": 570,
+    "SurveyQuestionId": 5,
+    "Answer": "Surabaya",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 9
+  },
+  {
+    "Id": 580,
+    "SurveyQuestionId": 5,
+    "Answer": "Jakarta",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 9
+  },
+  {
+    "Id": 590,
+    "SurveyQuestionId": 5,
+    "Answer": "Banten",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 9
+  },
+  {
+    "Id": 600,
+    "SurveyQuestionId": 5,
+    "Answer": "Solo",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 9
+  },
+  {
+    "Id": 610,
+    "SurveyQuestionId": 5,
+    "Answer": "D.I Yogyakarta",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 9
+  },
+  {
+    "Id": 620,
+    "SurveyQuestionId": 5,
+    "Answer": "Bali",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 9
+  },
+  {
+    "Id": 630,
+    "SurveyQuestionId": 5,
+    "Answer": "Other",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 9
+  },
+  {
+    "Id": 640,
+    "SurveyQuestionId": 6,
+    "Answer": "Select Answer",
+    "AnswerType": "Dropdown",
+    "NextQuestion": -1
+  },
+  {
+    "Id": 650,
+    "SurveyQuestionId": 6,
+    "Answer": "Ya",
+    "AnswerType": "Dropdown",
+    "NextQuestion": 5
+  },
+  {
+    "Id": 660,
     "SurveyQuestionId": 6,
     "Answer": "Tidak",
-    "AnswerType": "drop",
+    "AnswerType": "Dropdown",
     "NextQuestion": 10
   }
-
 ]

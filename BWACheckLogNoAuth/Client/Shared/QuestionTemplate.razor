@@ -1,0 +1,57 @@
+﻿@using BWACheckLogNoAuth.Shared.Models
+
+<div>
+    <table>
+        <tr>
+            <td style="text-align:start; vertical-align:text-top">@(currQuestion). </td>
+            <td>@surveyQuestion.Question</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <div>
+                    @surveyQuestion.Description
+                </div>
+                <div>
+                    @if (surveyQuestion.SurveyAnswers.First().AnswerType.Equals("Dropdown"))
+                    {
+                    <select @onchange="onChangeDropCallBack">
+                        @foreach (var answer in surveyQuestion.SurveyAnswers)
+                        {
+                            if (answer.Answer.Equals("Select Answer"))
+                            {
+                                <option selected value="@($"{answer.Answer}~{currQuestion}_{surveyQuestion.Id}_{answer.NextQuestion}")">@answer.Answer</option>
+                            }
+                            else
+                            {
+                                <option value="@($"{answer.Answer}~{currQuestion}_{surveyQuestion.Id}_{answer.NextQuestion}")">@answer.Answer</option>
+                            }
+                        }
+                    </select>
+                    }
+                    else if (surveyQuestion.SurveyAnswers.First().AnswerType.Equals("TextBox"))
+                    {
+                        @*<input for="Name" class="form-control" @bind="@tempAnswerText" />*@
+                        <input for="Name" @onchange="onChangeTextBoxCallBack" class="form-control" />
+                    }
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br/>
+</div>
+
+@code {
+
+    [Parameter]
+    public string currQuestion { get; set; }
+
+    [Parameter]
+    public SurveyQuestion surveyQuestion { get; set; }
+
+    [Parameter]
+    public EventCallback<ChangeEventArgs> onChangeDropCallBack { get; set; }
+
+    [Parameter]
+    public EventCallback<ChangeEventArgs> onChangeTextBoxCallBack { get; set; }
+}

@@ -4,14 +4,16 @@ using BWACheckLogNoAuth.Server.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BWACheckLogNoAuth.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210323032253_updateColResponseTime")]
+    partial class updateColResponseTime
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,8 +61,8 @@ namespace BWACheckLogNoAuth.Server.Migrations
                     b.Property<string>("Question")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ResponseTime")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("ResponseTime")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserResponseGuid")
                         .HasColumnType("uniqueidentifier");

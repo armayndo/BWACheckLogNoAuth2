@@ -9,7 +9,7 @@ namespace BWACheckLogNoAuth.Shared.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public Guid UserResponseGuid { get; set; }
-        public TimeSpan ResponseTime { get; set; }
+        public DateTime ResponseTime { get; set; }
         public string Question { get; set; }
         public string Answer { get; set; }
 
