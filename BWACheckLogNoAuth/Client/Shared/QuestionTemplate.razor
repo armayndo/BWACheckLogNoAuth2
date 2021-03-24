@@ -1,5 +1,6 @@
 ﻿@using BWACheckLogNoAuth.Shared.Models
 
+
 <div>
     <table>
         <tr>
@@ -15,26 +16,59 @@
                 <div>
                     @if (surveyQuestion.SurveyAnswers.First().AnswerType.Equals("Dropdown"))
                     {
-                    <select @onchange="onChangeDropCallBack">
-                        @foreach (var answer in surveyQuestion.SurveyAnswers)
-                        {
-                            if (answer.Answer.Equals("Select Answer"))
+                        <select @onchange="onChangeDropCallBack">
+                            <option value="@($"[Pilih Jawaban]~{currQuestion}_{surveyQuestion.Id}_-1")" selected>[Pilih Jawaban]</option>
+                            (Choose Region)
+                            @foreach (var answer in surveyQuestion.SurveyAnswers)
                             {
-                                <option selected value="@($"{answer.Answer}~{currQuestion}_{surveyQuestion.Id}_{answer.NextQuestion}")">@answer.Answer</option>
+                                if (answer.Answer.Equals("Select Answer"))
+                                {
+                                    @*<option value="@($"{answer.Answer}~{currQuestion}_{surveyQuestion.Id}_{answer.NextQuestion}")">@answer.Answer</option>*@
+                                }
+                                else
+                                {
+                                    <option value="@($"{answer.Answer}~{currQuestion}_{surveyQuestion.Id}_{answer.NextQuestion}")">@answer.Answer</option>
+                                }
                             }
-                            else
-                            {
-                                <option value="@($"{answer.Answer}~{currQuestion}_{surveyQuestion.Id}_{answer.NextQuestion}")">@answer.Answer</option>
-                            }
-                        }
-                    </select>
+                        </select>
                     }
                     else if (surveyQuestion.SurveyAnswers.First().AnswerType.Equals("TextBox"))
                     {
                         @*<input for="Name" class="form-control" @bind="@tempAnswerText" />*@
+
+                        //Jadi
                         <input for="Name" value="@textBoxAnswer" @onchange="onChangeTextBoxCallBack"
-                               @onfocusout="@UpdateTextBoxFromChild" class="form-control" />
+                               @oninput="@UpdateTextBoxFromChild" class="form-control" />
+
+                        //fail
+                        @*<input for="Name" @onchange="OnValueChanged" value="@Value" class="form-control" />*@
+
                     }
+                    else if (surveyQuestion.SurveyAnswers.First().AnswerType.Equals("CheckBox"))
+                    {
+                        @foreach (var answer in surveyQuestion.SurveyAnswers)
+                        {
+                            @*<input type="checkbox" @onchange="eventArgs => { CheckboxClicked(club.Answer, eventArgs.Value); }"
+                />@club.Answer<br />*@
+
+                            @*<input type="checkbox"
+                @onclick="() => ItemClicked(club.Answer, club.Id)" />@club.Answer<br />*@
+
+                            <input type="checkbox" @onchange="eventArgs => { CbItemClicked(answer.Answer, eventArgs.Value, currQuestion, surveyQuestion.Id, answer.NextQuestion); }" />@answer.Answer<br />
+                        }
+                    }
+                    else if (surveyQuestion.SurveyAnswers.First().AnswerType.Equals("DatePicker"))
+                    { 
+                        <div class="form-group row">
+                            <label for="dateOfBirth" class="col-sm-2 col-form-label">
+                                Date Of Birth
+                            </label>
+                            <div class="col-sm-10">
+                                <InputDate @bind-Value="@DateTime" class="form-control" />
+                            </div>
+                        </div>
+                    }
+
                 </div>
             </td>
         </tr>
@@ -43,6 +77,10 @@
 </div>
 
 @code {
+    public DateTime DateTime { get; set; } = DateTime.Now;
+
+    [Parameter]
+    public Action<string, object, string, int ,int> CbItemClicked { get; set; }
 
     [Parameter]
     public string currQuestion { get; set; }
@@ -57,17 +95,74 @@
     public EventCallback<ChangeEventArgs> onChangeTextBoxCallBack { get; set; }
 
     [Parameter]
+    public EventCallback<string> OnCheckBoxClickCallBack { get; set; }
+
+    protected async Task CheckBoxClick()
+    {
+        await OnCheckBoxClickCallBack.InvokeAsync("from child");
+    }
+
+    public string textBoxAnswer { get; set; }
+
+
+    //from parent: @bind-TbAnswer="tbAnswer"
+    [Parameter]
     public string TbAnswer { get; set; }
 
     [Parameter]
     public EventCallback<string> TbAnswerChanged { get; set; }
 
-    public string textBoxAnswer { get; set; }
-
     private async Task UpdateTextBoxFromChild()
     {
         await TbAnswerChanged.InvokeAsync($"{textBoxAnswer}~{currQuestion}_{surveyQuestion.Id}_{surveyQuestion.SurveyAnswers.First().NextQuestion}");
+        //await onChangeTextBoxCallBack.InvokeAsync();
     }
+
+    [Parameter]
+    public List<string> CbAnswer { get; set; } = new List<string>();
+
+    [Parameter]
+    public EventCallback<string> CbAnswerChanged { get; set; }
+
+    private void CheckboxClicked(string clubID, object checkedValue)
+    {
+        if ((bool)checkedValue)
+        {
+            if (!CbAnswer.Contains(clubID))
+            {
+                CbAnswer.Add(clubID);
+            }
+        }
+        else
+        {
+            if (CbAnswer.Contains(clubID))
+            {
+                CbAnswer.Remove(clubID);
+            }
+        }
+
+        foreach (var item in CbAnswer)
+        {
+            Console.WriteLine($"Check:{item}");
+        }
+
+        //await CbAnswerChanged.InvokeAsync("");
+    }
+
+    //[Parameter]
+    //public string Value { get; set; }
+
+    //[Parameter]
+    //public EventCallback<string> ValueChanged { get; set; }
+
+    //private Task OnValueChanged(ChangeEventArgs e)
+    //{
+    //    Value = e.Value.ToString();
+    //    Console.WriteLine($"inside OnvalueChange: {Value}~{currQuestion}");
+    //    return ValueChanged.InvokeAsync(Value);
+    //}
+
+
 
 
 
